@@ -7,10 +7,13 @@ if (!file.exists(filename)){
   fileURL <- "http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2FNEI_data.zip"
   download.file(fileURL, filename, method="curl")
 }  
-if (!file.exists("data/summarySCC_PM25.rds")) { 
+if (!file.exists("summarySCC_PM25.rds")) { 
   unzip(filename) 
 }
 
+if (!file.exists("Source_Classification_Code.rds")) { 
+  unzip(filename) 
+}
 
 
 # Loads RDS
